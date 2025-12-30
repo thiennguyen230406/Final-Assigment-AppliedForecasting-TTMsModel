@@ -1,0 +1,20 @@
+data:
+  dataset_type: energy
+  end_date: '2024-01-01'
+  freq: h
+  start_date: '2018-01-01'
+  ticker: AAPL
+  url: https://raw.githubusercontent.com/robikscube/HOURLY-ENERGY-CONSUMPTION/master/PJME_hourly.csv
+experiment:
+  folds: 3
+  horizon: 48
+  seasonal_period: 24
+  seed: 42
+models:
+  lgbm_lags:
+  - 1
+  - 24
+  - 168
+  lgbm_rolling_window: 24
+  ttm_context: 512
+  ttm_id: ibm/TTM
